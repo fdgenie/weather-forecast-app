@@ -9,8 +9,8 @@
     </tr>
     <tr *ngFor="let forecast of hourlyForecast; index as i">
       <td>{{ setTime(i) | date: "HH" }}:00</td>
-      <td>{{ forecast.temp.toFixed(0) }}</td>
-      <td>{{ forecast.wind_speed }}</td>
+      <td>{{ forecast.temp.toFixed(0) }}°c</td>
+      <td>{{ forecast.wind_speed }} m/s</td>
       <td>
         <img
           src="https://openweathermap.org/img/wn/{{
