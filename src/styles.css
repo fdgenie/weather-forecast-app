@@ -7,7 +7,6 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background: linear-gradient(180deg, #a9bed8c4 0%, #6b91af 75%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: #2f4f4fd5;
+  color: #2F4F4F;
 }

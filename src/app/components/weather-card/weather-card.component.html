@@ -2,16 +2,23 @@
   <!-- iterate the cities -->
   <div *ngFor="let city of cities; index as i">
     <div
-      [ngClass]="{ front: city.flippedCard }"
+      [ngClass]="{ front: flippedArray[i] }"
       class="item"
-      (click)="city.flippedCard = !city.flippedCard"
+      (click)="flippedArray[i] = !flippedArray[i]"
     >
-      <!-- Front face of the card  -->
-      <div *ngIf="!city.flippedCard; else weatherForecast">
-        <app-weather-front-card [city]="city"></app-weather-front-card>
+      <div *ngIf="flippedArray[i]; else frontCard">
+        <!-- Loading spinner when getting data from api again -->
+        <div *ngIf="loading; else backCard" class="back loading">
+          <div>loading...</div>
+        </div>
       </div>
 
-      <ng-template #weatherForecast>
+      <ng-template #frontCard>
+        <!-- Front face of the card  -->
+        <app-weather-front-card [city]="city"></app-weather-front-card>
+      </ng-template>
+
+      <ng-template #backCard>
         <!-- Back face of the card  -->
         <div class="back">
           <app-weather-back-card [city]="city"></app-weather-back-card>

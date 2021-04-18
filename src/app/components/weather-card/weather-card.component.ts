@@ -10,8 +10,9 @@ import { CityModel } from '@app/models/WeatherModels';
 })
 export class WeatherCardComponent implements OnInit {
   //Boolean to check if the user clicked the card
-  flippedCard: boolean = false;
   cities: Array<CityModel> = [];
+  flippedArray: Array<boolean> = Array(5).fill(false);
+  loading: Boolean;
 
   constructor(private WeatherService: WeatherService) {}
 
@@ -33,8 +34,11 @@ export class WeatherCardComponent implements OnInit {
 
   //The subscription to weather function
   subscriptToWeather(cities: Array<Observable<CityModel>>) {
+    this.loading = true;
     forkJoin(cities).subscribe((response) => {
+      console.log(response);
       this.cities = response;
+      this.loading = false;
     });
   }
 }

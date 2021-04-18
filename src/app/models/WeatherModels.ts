@@ -1,15 +1,9 @@
 export class CityModel {
-  base: string;
-  clouds: WeatherCloudsModel;
-  cod: number;
-  coord: WeatherCoordsModel;
-  dt: number;
   id: number;
-  main: WeatherMainModel;
   name: string;
-  sys: WeatherSysModel;
+  main: WeatherMainModel;
+  coord: WeatherCoordsModel;
   timezone: number;
-  visibility: number;
   weather: Array<WeatherWeatherModel>;
   wind: WeatherWindModel;
 }
@@ -31,10 +25,6 @@ export class HourlyForecastModel {
   wind_speed: number;
 }
 
-export class WeatherCloudsModel {
-  all: number;
-}
-
 export class WeatherCoordsModel {
   lon: number;
   lat: number;
@@ -47,14 +37,6 @@ export class WeatherMainModel {
   temp: number;
   temp_max: number;
   temp_min: number;
-}
-
-export class WeatherSysModel {
-  country: string;
-  id: number;
-  sunrise: number;
-  sunset: number;
-  type: number;
 }
 
 export class WeatherWeatherModel {
