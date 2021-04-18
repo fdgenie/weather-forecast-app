@@ -1,0 +1,23 @@
+<div class="container">
+  <div>
+    <p class="cityName">{{ city.name }}</p>
+    <p class="todayDate">{{ today | date: "EEEE, MMMM d" }}</p>
+    <p>{{ today | date: "HH:mm" }}</p>
+  </div>
+  <div>
+    <p class="averageTemp">{{ averageTemp() }}°c</p>
+    <p>
+      {{
+        city.weather[0].description.charAt(0).toUpperCase() +
+          city.weather[0].description.slice(1)
+      }}
+    </p>
+    <img [src]="icon" alt="" />
+  </div>
+  <div class="extraInformations">
+    <img src="assets/images/wind.svg" alt="" width="25px" />
+    <span>{{ city.wind.speed }}m/s </span>
+    <img src="assets/images/humidity.svg" alt="" width="25px" />
+    <span>{{ city.main.humidity }}% </span>
+  </div>
+</div>

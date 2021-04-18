@@ -1,0 +1,25 @@
+<div>
+  <div class="header">{{ city.name }}</div>
+  <table class="forecastTable">
+    <tr>
+      <th><img src="assets/images/clock.svg" alt="" width="30px" /></th>
+      <th><img src="assets/images/thermometer.svg" alt="" width="30px" /></th>
+      <th><img src="assets/images/wind.svg" alt="" width="30px" /></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let forecast of hourlyForecast; index as i">
+      <td>{{ setTime(i) | date: "HH" }}:00</td>
+      <td>{{ forecast.temp.toFixed(0) }}</td>
+      <td>{{ forecast.wind_speed }}</td>
+      <td>
+        <img
+          src="https://openweathermap.org/img/wn/{{
+            forecast.weather[0].icon
+          }}@2x.png"
+          alt=""
+          height="30px"
+        />
+      </td>
+    </tr>
+  </table>
+</div>

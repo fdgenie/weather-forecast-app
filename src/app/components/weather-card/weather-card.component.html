@@ -1,0 +1,22 @@
+<div class="container">
+  <!-- iterate the cities -->
+  <div *ngFor="let city of cities; index as i">
+    <div
+      [ngClass]="{ front: city.flippedCard }"
+      class="item"
+      (click)="city.flippedCard = !city.flippedCard"
+    >
+      <!-- Front face of the card  -->
+      <div *ngIf="!city.flippedCard; else weatherForecast">
+        <app-weather-front-card [city]="city"></app-weather-front-card>
+      </div>
+
+      <ng-template #weatherForecast>
+        <!-- Back face of the card  -->
+        <div class="back">
+          <app-weather-back-card [city]="city"></app-weather-back-card>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
