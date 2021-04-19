@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WeatherBackCardComponent } from './weather-back-card.component';
@@ -8,7 +9,8 @@ describe('WeatherBackCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WeatherBackCardComponent ]
+      declarations: [ WeatherBackCardComponent ],
+      imports: [HttpClientModule],
     })
     .compileComponents();
   });
@@ -16,7 +18,7 @@ describe('WeatherBackCardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(WeatherBackCardComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    // fixture.detectChanges();
   });
 
   it('should create', () => {

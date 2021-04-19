@@ -15,10 +15,6 @@
   transition: transform 1s;
 }
 
-.front {
-  transform: rotateY(-180deg);
-}
-
 .back {
   transform: rotateY(180deg);
 }

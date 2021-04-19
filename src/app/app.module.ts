@@ -8,7 +8,12 @@ import { WeatherFrontCardComponent } from './components/weather-front-card/weath
 import { WeatherBackCardComponent } from './components/weather-back-card/weather-back-card.component';
 
 @NgModule({
-  declarations: [AppComponent, WeatherCardComponent, WeatherFrontCardComponent, WeatherBackCardComponent],
+  declarations: [
+    AppComponent,
+    WeatherCardComponent,
+    WeatherFrontCardComponent,
+    WeatherBackCardComponent,
+  ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

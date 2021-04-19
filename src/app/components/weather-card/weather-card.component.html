@@ -2,7 +2,7 @@
   <!-- iterate the cities -->
   <div *ngFor="let city of cities; index as i">
     <div
-      [ngClass]="{ front: flippedArray[i] }"
+      [ngClass]="{ back: flippedArray[i] }"
       class="item"
       (click)="flippedArray[i] = !flippedArray[i]"
     >

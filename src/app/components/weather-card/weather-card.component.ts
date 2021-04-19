@@ -35,8 +35,7 @@ export class WeatherCardComponent implements OnInit {
   //The subscription to weather function
   subscriptToWeather(cities: Array<Observable<CityModel>>) {
     this.loading = true;
-    forkJoin(cities).subscribe((response) => {
-      console.log(response);
+    forkJoin(cities).subscribe((response: Array<CityModel>) => {
       this.cities = response;
       this.loading = false;
     });

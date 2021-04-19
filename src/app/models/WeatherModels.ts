@@ -48,5 +48,6 @@ export class WeatherWeatherModel {
 
 export class WeatherWindModel {
   deg: number;
+  gust: number;
   speed: number;
 }

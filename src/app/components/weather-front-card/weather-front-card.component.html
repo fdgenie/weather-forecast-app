@@ -5,7 +5,9 @@
     <p>{{ today | date: "HH:mm" }}</p>
   </div>
   <div>
-    <p class="averageTemp">{{ averageTemp() }}°c</p>
+    <p class="averageTemp">
+      {{ averageTemp(city.main.temp_max, city.main.temp_min) }}°c
+    </p>
     <p>
       {{
         city.weather[0].description.charAt(0).toUpperCase() +

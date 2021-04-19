@@ -27,7 +27,7 @@ export class WeatherFrontCardComponent implements OnInit {
   }
 
   //Function that calculate the average temperature
-  averageTemp(): string {
-    return ((this.city.main.temp_max + this.city.main.temp_min) / 2).toFixed(0);
+  averageTemp(maxTemp: number, minTemp: number): string {
+    return ((maxTemp + minTemp) / 2).toFixed(0);
   }
 }
