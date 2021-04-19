@@ -52,7 +52,7 @@ describe('WeatherService', () => {
   });
 
   afterEach(() => {
-    // httpTestingController.verify();
+    httpTestingController.verify();
   });
 
   it('should be created', () => {
