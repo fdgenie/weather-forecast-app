@@ -1,7 +1,7 @@
 # WeatherApp
 
 This project is a single page application that shows basic information about the weather of five cities. The api I used for the data is http://openweathermap.org/current.
-The project consists of three components. The first component is the weather-card which is the container for the other two and also forms the shape of the card. The second component is the weather-front-card where we can see the basic information of a city's current weather. The last component is the weather-back-card where we can see the forecast of the next seven hours of a city. The application is responsive.
+The project consists of three components. The first component is the weather-card which is the container for the other two and also forms the shape of the card. The second component is the weather-front-card where we can see the basic information of a city's current weather. The last component is the weather-back-card where we can see the forecast of the next seven hours of a city. The application is responsive and have unit tests.
 
 ## Development server
 
